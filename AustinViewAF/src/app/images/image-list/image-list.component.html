@@ -1,0 +1,30 @@
+<div class="card" style="width:75rem" >
+  <div class="card-header h3 align: text-center">
+    {{ pageTitle }}
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Picture</th>
+            <th>Place Name</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let i of imageList">
+            <td><a [routerLink]="[ i.placeId ]">
+              <img [src]="i.imageUrl"
+                    [title]="i.placeName"
+                    [style.width.px]="400"
+                    [style.margin.px]='2'></a>
+            </td>
+            <td><a [routerLink]="['/image/list', i.placeId]">{{ i.placeName }}</a></td>
+            <td>{{ i.city }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
