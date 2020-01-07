@@ -7,9 +7,10 @@
 # What have been done on this WebApp?
 - At this stage, we can only view a few locations mostly scenery.
 - we can add more location, and it will be save on firebase.
-
-However: we must enter placeID manually (must count the number of locations which had already been in the list and enter the next number 
+# Problems:
+ 1. we must enter placeID manually (must count the number of locations which had already been in the list and enter the next number 
 for placeID, ex: if there are 4 loactions, then we must enter 5 for placeID) But i will fix this problem ASAP.
+solved: now the placeID will increase 1 after each uploading.
 
 # what is next?
 - Add famous caffee shops, famous restaurants, and many more.
