@@ -15,6 +15,8 @@ export class ImageComponent implements OnInit {
   imgSrc: string;
   selectedImage: any = null;
   isSubmitted: boolean;
+  imageList: any[];
+  index: number;
 
   formTemplate = new FormGroup({
     placeId: new FormControl('', Validators.required),
@@ -24,6 +26,7 @@ export class ImageComponent implements OnInit {
     Address: new FormControl('', Validators.required),
     imageUrl: new FormControl('', Validators.required)
   });
+
 
   constructor(private storage: AngularFireStorage,
               private service: ImageService) { }
@@ -55,7 +58,7 @@ export class ImageComponent implements OnInit {
               formValue.imageUrl = url;
               this.service.insertImageDetails(formValue);
               this.resetForm();
-            })
+            });
           })
         ).subscribe();
       }
@@ -65,19 +68,29 @@ export class ImageComponent implements OnInit {
     return this.formTemplate.controls; // some thing here. tuitorial syntax: formTemplate['controls'];
   }
 
+
+
   resetForm() {
-    this.formTemplate.reset();
-    this.formTemplate.setValue({
-      placeId: null,
-      placeName: null,
-      city: null,
-      placeDescription: null,
-      Address: null,
-      imageUrl: null
+    this.service.imageDetailList.snapshotChanges().subscribe(
+      list => {
+        this.imageList = list.map(item => item.payload.val());
+        this.index = this.imageList.length + 1;
+        this.formTemplate.reset();
+        this.formTemplate.setValue({
+        placeId: this.index,
+        placeName: null,
+        city: null,
+       placeDescription: null,
+        Address: null,
+        imageUrl: null
     });
-    this.imgSrc = '/assets/img/imagePlaceHolder.png';
-    this.selectedImage = null;
-    this.isSubmitted = false;
+        this.imgSrc = '/assets/img/imagePlaceHolder.png';
+        this.selectedImage = null;
+        this.isSubmitted = false;
+      }
+
+    );
+
   }
 
 }
