@@ -1,3 +1,21 @@
+# Project Objective
+  this project is using Angular Cli and Google Firebase as an database storage. this WebApp is still very primitive, but it cantains a great potential opportunity of expanding its features.
+
+# what is AustinView?
+  This is a website which showes Austin residents or tourists from all over the world where they should go, and what they should do in Austin area. Each location in this website shows a description, a youtube, and a google Map of that location.
+  
+# What have been done on this WebApp?
+- At this stage, we can only view a few locations mostly scenery.
+- we can add more location, and it will be save on firebase.
+
+However: we must enter placeID manually (must count the number of locations which had already been in the list and enter the next number 
+for placeID, ex: if there are 4 loactions, then we must enter 5 for placeID) But i will fix this problem ASAP.
+
+# what is next?
+- Add famous caffee shops, famous restaurants, and many more.
+- Authentication would be an option.
+
+
 # AngularImage
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
