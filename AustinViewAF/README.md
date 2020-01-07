@@ -12,6 +12,8 @@
 for placeID, ex: if there are 4 loactions, then we must enter 5 for placeID) But i will fix this problem ASAP.
 solved: now the placeID will increase by 1 after each uploading.
 
+2. will disable entering placeID, do it next.
+
 # what is next?
 - Add famous caffee shops, famous restaurants, and many more.
 - Authentication would be an option.
