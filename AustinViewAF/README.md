@@ -12,7 +12,13 @@
 for placeID, ex: if there are 4 loactions, then we must enter 5 for placeID) But i will fix this problem ASAP.
 solved: now the placeID will increase by 1 after each uploading.
 
-2. will disable entering placeID, do it next.
+2. will disable entering placeID, do it next.(Done. 1/8/2020)
+
+# Functionalities might be included in the futures tasks.
+- Edit information, it will give users a chance to modify existing information and update information.
+- Delete place might be implemented but not recommended.
+- a youtube video and google map of each location would be embeded in each detail information.
+- ...
 
 # what is next?
 - Add famous caffee shops, famous restaurants, and many more.
