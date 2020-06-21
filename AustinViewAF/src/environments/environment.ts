@@ -5,14 +5,7 @@
 export const environment = {
   production: false,
   firebaseConfig : {
-    apiKey: 'AIzaSyBGKDLqiO9FVmxCZfXEGNwGQyrZYtmJz_Q',
-    authDomain: 'angular-image-gallery-cf2bb.firebaseapp.com',
-    databaseURL: 'https://angular-image-gallery-cf2bb.firebaseio.com',
-    projectId: 'angular-image-gallery-cf2bb',
-    storageBucket: 'angular-image-gallery-cf2bb.appspot.com',
-    messagingSenderId: '975217947520',
-    appId: '1:975217947520:web:2e0be7a9446b4fb7018765',
-    measurementId: 'G-DK2RB1TYX4'
+    your firebaseConfig Key
   }
 };
 
